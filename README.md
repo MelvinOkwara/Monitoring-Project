@@ -14,23 +14,15 @@ This project demonstrates a full-stack observability solution for a Python appli
 - **Infrastructure:** Docker & Docker Compose
 
 ## ⚙️ Setup Instructions
-Once the services are launched, you can access the different components of the stack using the links below:
-
-- **🚀 Application:** [http://localhost:5000](http://localhost:5000)
-- **🔥 Prometheus:** [http://localhost:9090](http://localhost:9090)
-- **📊 Grafana:** [http://localhost:3000](http://localhost:3000) (Login: **admin** / **admin**)
-
-> [!NOTE]
-> The links above point to `localhost`. They will only work when the project is actively running on your local machine via Docker.
-
----
-
-## 📊 Visualizations
-
-### Request Latency Monitoring
-To track performance, I implemented a custom **PromQL** query to visualize the **"Golden Signal"** of Latency. This query calculates the average request duration by dividing the total time by the request count:
-
-```promql
+1. **Launch the services:**
+   ```bash
+   docker compose up -d --build
+Access the Application: http://localhost:5000
+Access Prometheus: http://localhost:9090
+Access Grafana: http://localhost:3000 (Login: admin / admin)
+📊 Visualizations
+Request Latency Monitoring
+To track performance, I implemented a custom PromQL query to visualize the "Golden Signal" of Latency:
 rate(http_request_duration_seconds_sum[1m]) / rate(http_request_duration_seconds_count[1m])
 ![alt text](./10-monitoring-dashboard.png)
 🛠 Technical Workflow Gallery
@@ -53,7 +45,6 @@ I generated simulated traffic to verify the detection of 500 Internal Server Err
 <img src="06-container-status.png" width="45%" />
 <img src="07-traffic-generation.png" width="45%" />
 </p>
-
 ---
 
 ## 🛡️ DevSecOps Note
