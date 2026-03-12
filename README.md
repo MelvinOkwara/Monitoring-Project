@@ -17,9 +17,9 @@ This project demonstrates a full-stack observability solution for a Python appli
 1. **Launch the services:**
    ```bash
    docker compose up -d --build
-1. Access the Application: http://localhost:5000
-2. Access Prometheus: http://localhost:9090
-3. Access Grafana: http://localhost:3000 (Login: admin / admin)
+Access the Application: http://localhost:5000
+Access Prometheus: http://localhost:9090
+Access Grafana: http://localhost:3000 (Login: admin / admin)
 📊 Visualizations
 Request Latency Monitoring
 To track performance, I implemented a custom PromQL query to visualize the "Golden Signal" of Latency:
@@ -28,21 +28,18 @@ rate(http_request_duration_seconds_sum[1m]) / rate(http_request_duration_seconds
 🛠 Technical Workflow Gallery
 Below are the technical components and verification steps passed during the development of this monitoring stack.
 1. Application & Containerization
-   
 The Flask app was instrumented with the Prometheus client and packaged into a lightweight Docker image.
 <p align="center">
 <img src="01-flask-app-metrics.png" width="45%" />
 <img src="02-dockerfile-setup.png" width="45%" />
 </p>
 2. Infrastructure & Scrape Config
-
 Prometheus was configured to scrape the app every 5 seconds. Docker Compose handles the networking between services.
 <p align="center">
 <img src="03-prometheus-config.png" width="45%" />
 <img src="04-docker-compose.png" width="45%" />
 </p>
 3. Verification & Traffic Generation
-
 I generated simulated traffic to verify the detection of 500 Internal Server Errors and Latency Spikes.
 <p align="center">
 <img src="06-container-status.png" width="45%" />
@@ -50,9 +47,7 @@ I generated simulated traffic to verify the detection of 500 Internal Server Err
 </p>
 🛡 DevSecOps Note
 As part of this workflow, I integrated security best practices by ensuring that only images with a successful exit code are pushed to the registry, effectively "shifting left" in the development lifecycle.
-
 📬 Connect with Me
-
 Name: Melvin Okwara
 LinkedIn: linkedin.com/in/melvin-okwara-3a8b81330
 Email: okwaramelvin11@gmail.com
