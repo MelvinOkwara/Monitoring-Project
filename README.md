@@ -47,6 +47,7 @@ I generated simulated traffic to verify the detection of 500 Internal Server Err
 </p>
 🛡 DevSecOps Note
 As part of this workflow, I integrated security best practices by ensuring that only images with a successful exit code are pushed to the registry, effectively "shifting left" in the development lifecycle.
+
 📬 Connect with Me
 Name: Melvin Okwara
 LinkedIn: linkedin.com/in/melvin-okwara-3a8b81330
