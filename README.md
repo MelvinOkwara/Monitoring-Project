@@ -45,6 +45,7 @@ I generated simulated traffic to verify the detection of 500 Internal Server Err
 <img src="06-container-status.png" width="45%" />
 <img src="07-traffic-generation.png" width="45%" />
 </p>
+
 ---
 
 ## 🛡️ DevSecOps Note
