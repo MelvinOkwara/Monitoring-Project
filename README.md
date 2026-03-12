@@ -45,10 +45,13 @@ I generated simulated traffic to verify the detection of 500 Internal Server Err
 <img src="06-container-status.png" width="45%" />
 <img src="07-traffic-generation.png" width="45%" />
 </p>
-🛡 DevSecOps Note
+## 🛡️ DevSecOps Note
 As part of this workflow, I integrated security best practices by ensuring that only images with a successful exit code are pushed to the registry, effectively "shifting left" in the development lifecycle.
-📬 Connect with Me
-Name: Melvin Okwara
-LinkedIn: linkedin.com/in/melvin-okwara-3a8b81330
-Email: okwaramelvin11@gmail.com
-Portfolio: github.com/MelvinOkwara
+
+---
+
+## 📬 Connect with Me
+- **Name:** Melvin Okwara
+- **LinkedIn:** [linkedin.com/in/melvin-okwara-3a8b81330](https://linkedin.com/in/melvin-okwara-3a8b81330)
+- **Email:** [okwaramelvin11@gmail.com](mailto:okwaramelvin11@gmail.com)
+- **Portfolio:** [github.com/MelvinOkwara](https://github.com/MelvinOkwara)
